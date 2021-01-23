@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseCell" rowHeight="430" id="rT9-L8-8vR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseCell" rowHeight="430" id="rT9-L8-8vR" customClass="CourseTableViewCell" customModule="CourseView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="430"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rT9-L8-8vR" id="sG0-2B-jv8">
@@ -55,6 +55,11 @@
                                         <constraint firstItem="sGx-qT-kzd" firstAttribute="top" secondItem="q3A-pC-gcy" secondAttribute="bottom" constant="8" symbolic="YES" id="oh5-V9-mSN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="courseImage" destination="q3A-pC-gcy" id="pcR-JF-8Jx"/>
+                                    <outlet property="subtitleLabel" destination="3xA-su-vhj" id="cUg-sr-qJu"/>
+                                    <outlet property="titleLabel" destination="sGx-qT-kzd" id="xi5-3k-knb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

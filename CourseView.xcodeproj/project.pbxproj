@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		375DC24C25BB47580099CA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375DC24A25BB47580099CA26 /* LaunchScreen.storyboard */; };
 		375DC25625BB47F00099CA26 /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DC25525BB47F00099CA26 /* CourseTableViewController.swift */; };
 		375DC25925BB56E60099CA26 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DC25825BB56E60099CA26 /* Course.swift */; };
+		375DC25D25BBCA920099CA26 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DC25C25BBCA920099CA26 /* CourseTableViewCell.swift */; };
+		375DC26125BBCE090099CA26 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 375DC26025BBCE090099CA26 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		375DC24D25BB47580099CA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		375DC25525BB47F00099CA26 /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		375DC25825BB56E60099CA26 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		375DC25C25BBCA920099CA26 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375DC26125BBCE090099CA26 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 				375DC23F25BB47550099CA26 /* AppDelegate.swift */,
 				375DC24125BB47550099CA26 /* SceneDelegate.swift */,
 				375DC25525BB47F00099CA26 /* CourseTableViewController.swift */,
+				375DC25C25BBCA920099CA26 /* CourseTableViewCell.swift */,
 				375DC25825BB56E60099CA26 /* Course.swift */,
 				375DC24525BB47550099CA26 /* Main.storyboard */,
 				375DC24825BB47580099CA26 /* Assets.xcassets */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = CourseView;
+			packageProductDependencies = (
+				375DC26025BBCE090099CA26 /* Kingfisher */,
+			);
 			productName = CourseView;
 			productReference = 375DC23C25BB47550099CA26 /* CourseView.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 375DC23325BB47550099CA26;
+			packageReferences = (
+				375DC25F25BBCE090099CA26 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 375DC23D25BB47550099CA26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +155,7 @@
 				375DC24025BB47550099CA26 /* AppDelegate.swift in Sources */,
 				375DC25625BB47F00099CA26 /* CourseTableViewController.swift in Sources */,
 				375DC24225BB47550099CA26 /* SceneDelegate.swift in Sources */,
+				375DC25D25BBCA920099CA26 /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		375DC25F25BBCE090099CA26 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		375DC26025BBCE090099CA26 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 375DC25F25BBCE090099CA26 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 375DC23425BB47550099CA26 /* Project object */;
 }
