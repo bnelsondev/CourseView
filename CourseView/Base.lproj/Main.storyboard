@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fHN-y6-4jQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Courses-->
+        <scene sceneID="x2p-Nt-1GA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="2yv-Ly-SGZ" customClass="CourseTableViewController" customModule="CourseView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0e7-Qb-Xiz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseCell" rowHeight="430" id="rT9-L8-8vR">
+                                <rect key="frame" x="0.0" y="28" width="414" height="430"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rT9-L8-8vR" id="sG0-2B-jv8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwiftUI-iOS14-CourseImageBig" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-pC-gcy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="q3A-pC-gcy" secondAttribute="height" multiplier="1500:844" id="rx3-h6-oXt"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftUI Apps on All Devices - iPhone, iPad, Mac, Watch &amp; TV" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGx-qT-kzd">
+                                            <rect key="frame" x="20" y="241" width="374" height="113"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Make Apps and Widgets for iOS 14, macOS 11, watchOS 7 and tvOS 14 using Xcode 12, Swift 5, WidgetKit and Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xA-su-vhj">
+                                            <rect key="frame" x="20" y="361" width="374" height="58"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="q3A-pC-gcy" firstAttribute="leading" secondItem="sG0-2B-jv8" secondAttribute="leading" id="0Wt-Y1-Hll"/>
+                                        <constraint firstItem="3xA-su-vhj" firstAttribute="top" secondItem="sGx-qT-kzd" secondAttribute="bottom" constant="7" id="3ap-ui-HaZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3xA-su-vhj" secondAttribute="bottom" id="7Rv-Hz-Pus"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sGx-qT-kzd" secondAttribute="trailing" id="BQT-GV-S0Y"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3xA-su-vhj" secondAttribute="trailing" id="J6B-mx-Eg2"/>
+                                        <constraint firstAttribute="trailing" secondItem="q3A-pC-gcy" secondAttribute="trailing" id="U7F-MV-Mb5"/>
+                                        <constraint firstItem="3xA-su-vhj" firstAttribute="leading" secondItem="sG0-2B-jv8" secondAttribute="leadingMargin" id="YpL-Bq-ss9"/>
+                                        <constraint firstItem="sGx-qT-kzd" firstAttribute="leading" secondItem="sG0-2B-jv8" secondAttribute="leadingMargin" id="eEX-5O-BTb"/>
+                                        <constraint firstItem="q3A-pC-gcy" firstAttribute="top" secondItem="sG0-2B-jv8" secondAttribute="top" id="kc9-zg-2OR"/>
+                                        <constraint firstItem="sGx-qT-kzd" firstAttribute="top" secondItem="q3A-pC-gcy" secondAttribute="bottom" constant="8" symbolic="YES" id="oh5-V9-mSN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2yv-Ly-SGZ" id="hhN-FS-lil"/>
+                            <outlet property="delegate" destination="2yv-Ly-SGZ" id="Mla-e8-6hr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Courses" id="hYe-uF-ftB">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="AF6-Yn-kox">
+                            <connections>
+                                <action selector="reloadTapped:" destination="2yv-Ly-SGZ" id="pUg-1w-0fO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjB-d6-aaD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2021.7391304347827" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N34-Ky-4vh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fHN-y6-4jQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7w6-EL-vr8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2yv-Ly-SGZ" kind="relationship" relationship="rootViewController" id="jyC-RM-ZXR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItG-Pd-ya2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.5942028985507" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SwiftUI-iOS14-CourseImageBig" width="1500" height="844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
